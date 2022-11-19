@@ -35,8 +35,10 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: |
-        npm ci
-        npm run release
+        npm i
+        npm run postcss:build
+        npm run postcss:release
+        npm run shadow:release
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       if: ${{ github.ref == 'refs/heads/main' }}
