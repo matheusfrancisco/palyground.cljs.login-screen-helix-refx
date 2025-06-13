@@ -51,3 +51,4 @@ To create a release artifact run `npm run release` which will create a js and cs
 ```
 npm run release
 ```
+
